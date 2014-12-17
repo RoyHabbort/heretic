@@ -1,0 +1,996 @@
+
+
+
+
+
+
+/*
+ * 4-12-2014
+ * Цветовая схема
+ */
+
+
+@yellow: #f2b702;
+@orange : #FF6111;
+@link : #000;
+@text : #454545;
+@grey : #868686;
+@greyLight : #f3f3f3;
+@fon : #edede9;
+@greyBorder: #b6b9b9;
+
+/*
+ * 4-12-2014
+ * переменные
+ */
+
+@contentWidth : 1150px;
+@contentFullWidth : 1200px;
+
+
+
+/*
+ * Подключение шрифтов
+ * 4-09-2014
+ */
+
+// Медиум гельветик
+@font-face {
+    font-family: HelveticaMedium;
+    src: url('../font/webfont/helveticaneuecyr-medium.eot');
+    src: url('../font/webfont/helveticaneuecyr-medium.eot?#iefix') format('embedded-opentype'),
+         url('../font/webfont/helveticaneuecyr-medium.woff') format('woff'),
+         url('../font/webfont/helveticaneuecyr-medium.ttf') format('truetype'),
+         url('../font/webfont/helveticaneuecyr-medium.svg#helveticaneuecyrroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// Обычный гельветик
+@font-face {
+    font-family: Helvetica;
+    src: url('../font/webfont/helveticaneuecyr-roman.eot');
+    src: url('../font/webfont/helveticaneuecyr-roman.eot?#iefix') format('embedded-opentype'),
+         url('../font/webfont/helveticaneuecyr-roman.woff') format('woff'),
+         url('../font/webfont/helveticaneuecyr-roman.ttf') format('truetype'),
+         url('../font/webfont/helveticaneuecyr-roman.svg#helveticaneuecyrroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+// Гельветик курсив
+@font-face {
+    font-family: Helvetica;
+    src: url('../font/webfont/helveticaneuecyr-italic.eot');
+    src: url('../font/webfont/helveticaneuecyr-italic.eot?#iefix') format('embedded-opentype'),
+         url('../font/webfont/helveticaneuecyr-italic.woff') format('woff'),
+         url('../font/webfont/helveticaneuecyr-italic.ttf') format('truetype'),
+         url('../font/webfont/helveticaneuecyr-italic.svg#helveticaneuecyritalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+
+//Гельветик жирный
+@font-face {
+    font-family: Helvetica;
+    src: url('../font/webfont/helveticaneuecyr-bold.eot');
+    src: url('../font/webfont/helveticaneuecyr-bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/webfont/helveticaneuecyr-bold.woff') format('woff'),
+         url('../font/webfont/helveticaneuecyr-bold.ttf') format('truetype'),
+         url('../font/webfont/helveticaneuecyr-bold.svg#helveticaneuecyrbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+//Гельветик жирный курсив
+@font-face {
+    font-family: Helvetica;
+    src: url('../font/webfont/helveticaneuecyr-bolditalic.eot');
+    src: url('../font/webfont/helveticaneuecyr-bolditalic.eot?#iefix') format('embedded-opentype'),
+         url('../font/webfont/helveticaneuecyr-bolditalic.woff') format('woff'),
+         url('../font/webfont/helveticaneuecyr-bolditalic.ttf') format('truetype'),
+         url('../font/webfont/helveticaneuecyr-bolditalic.svg#helveticaneuecyrbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+
+
+
+/*
+ * 4-12-2014
+ * основные стили
+ */
+
+html, body{
+    height:100%;
+    background: url('../img/back.gif') 0 0;
+    background-size: 100%;
+    color:@text;
+    font-family: Helvetica;
+}
+
+.content-width{
+    width:@contentWidth;
+    margin:0 auto;
+}
+
+.content-full-width{
+    width: @contentFullWidth;
+    margin:0 auto;
+}
+
+
+.table-type{
+    display:table;
+    
+    & > div{
+        display:table-cell;
+        vertical-align: top;
+    }
+}
+
+a{
+    color:@link;
+    text-decoration: none;
+    
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.dec-lnk{
+    text-decoration: none;
+}
+
+.row{
+    width:100%;
+}
+
+
+h1{
+    font-size: 40px;
+    line-height:1.5;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 30px;
+    line-height:2.5;
+}
+
+p{
+    font-size: 17px;
+    margin-bottom: 20px;
+    line-height:1.4;
+}
+
+i, em{
+    font-style:italic;
+}
+
+strong, b{
+    font-weight: bold;
+}
+
+.g-txt{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.s-txt{
+    font-size: 12px;
+}
+
+.mediate{
+    margin-bottom: 10px;
+    
+    .text{
+        padding-left: 10px;
+    }
+    
+}
+
+
+/*
+ * 4-12-2014
+ * Header
+ */
+
+.head-line {
+    display:table;
+    
+    & > div{
+        display: table-cell;
+        vertical-align: middle;
+        padding:25px 0;
+    }
+    
+    .logo-text{
+        color:@text;
+        padding-left: 20px;
+        vertical-align: middle;
+    }
+    
+    .logo-cell{
+        a{
+            text-decoration: none;
+        }
+    }
+    
+}
+
+.logo-title{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.logo-sub-title{
+    font-size: 13px;
+    text-align: center;
+}
+
+.phone-cell{
+    text-align: right;
+    vertical-align: top !important;
+    
+    & > div{
+        padding-top:2px;
+    }
+}
+
+.phone{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.small-phone{
+    margin-right: 10px;
+}
+
+.big-phone{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.social{
+    font-size: 16px;
+}
+
+.table-type-inline{
+    display:table;
+    
+    & > * {
+        display:table-cell;
+        vertical-align: top;
+    }
+}
+
+.float-right{
+    float:right;
+}
+
+.soc-text{
+    padding-right:10px;
+}
+
+.soc{
+    display: inline-block;
+    width:25px;
+    height:25px;
+    background: url('../img/icons/icons.png') no-repeat;
+}
+
+.tw{background-position: 0 0;}
+.ok{background-position: -35px 0;}
+.vk{background-position: -70px 0;}
+.gp{background-position: -105px 0;}
+.fb{background-position: -140px 0;}
+
+.sub-logo{
+    padding-left:50px;
+    line-height: 1.4;
+    
+    .mediate:first-child{
+        padding-left:3px;
+    }
+}
+
+
+
+/*
+ * 28-11-2014
+ * бредкрамбсы
+ */
+
+.breadcrumbs{
+    padding-top:20px;
+    padding-bottom: 40px;
+}
+
+.breadcrumbs-widget{
+    
+}
+
+.breadcrumbs-one{
+    float:left;
+}
+
+.breadcrumbs-link{
+    &:after{
+        content: '|';
+        padding:0 5px;
+        
+    }
+}
+
+
+/*
+ * 4-12-2014
+ * Main-menu
+ */
+
+.main-menu-line{
+    display:block;
+    overflow:hidden;
+    background: url('../img/back/nav_bg.png');
+    background-size: 100% 100%;
+}
+
+.main-menu-list{
+    display:table;
+    width:100%;
+    height:58px;
+    z-index:9999;
+    font-family:HelveticaMedium;
+
+    .hr-nav-img{
+        width:2px;
+        padding:0px !important;
+        background: url(../img/back/nav_bg_hr.png) no-repeat 0 0;
+        height:60px;
+    }
+    
+    .main-menu-link{
+        padding:20px 36px;
+    }
+    /*
+    .main-menu-link:nth-child(1){padding-left:43px; padding-right:43px;}
+    .main-menu-link:nth-child(2){padding-left:43px; padding-right:43px;}
+    .main-menu-link:nth-child(3){padding-left:43px; padding-right:43px;}
+    .main-menu-link:nth-child(4){padding-left:43px; padding-right:43px;}
+    .main-menu-link:nth-child(5){padding-left:43px; padding-right:43px;}
+    .main-menu-link:nth-child(6){padding-left:43px; padding-right:43px;}
+    .main-menu-link:nth-child(7){padding-left:43px; padding-right:43px;}
+    */
+    
+    .main-menu-link:last-child{
+        border-right:0px;
+    }
+    
+    & > *{
+        display:table-cell;
+        vertical-align: middle;
+        font-size: 15px;
+        color:#fff;
+        text-transform: uppercase;
+        
+        text-align:center;
+    }
+    
+    & > a{
+        
+        
+    }
+    
+    
+    
+    
+}
+
+
+.gradient{
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+}
+
+
+.main-pre{
+    width:25px;
+}
+
+.main-pre:nth-child(0){
+    -webkit-border-top-left-radius: 25px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 25px;
+    -moz-border-radius-topleft: 25px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 25px;
+}
+
+.main-pre:nth-child(1){
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 25px;
+    -webkit-border-bottom-right-radius: 25px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 25px;
+    -moz-border-radius-bottomright: 25px;
+    -moz-border-radius-bottomleft: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 0px;
+}
+
+
+/*
+ * 25-11-2014
+ * slider-appartament
+ */
+
+.slider-clear{
+    .bx-wrapper, .bx-viewport{
+        box-shadow: none !important;
+        padding: 0!important;
+        margin:0!important;
+        left:0 !important;
+        border:0 !important;
+        background: transparent !important;
+    }
+}
+
+/*
+ * 17-12-2014
+ * footer-menu
+ * Roy
+ */
+
+.footer-menu{
+    padding:20px 30px;
+    background: @orange;
+    color:@greyLight - #111;
+    .border-box;
+}
+
+.block-footer-menu{
+    a{
+        color:@greyLight - #111;
+    }
+}
+
+.footer-menu-list{
+    display:table;
+    width:100%;
+}
+
+.block-footer-menu{
+    display:table-cell;
+    vertical-align: top;
+}
+
+.footer-menu-link{
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom:20px;
+}
+
+/*
+ * 4-12-2014
+ * Footer
+ */
+
+.f-studio{
+    float:right;
+    a{
+        color:@greyLight - #111;
+    }
+}
+
+.phone-f{
+    font-size:18px;
+    color:#fff;
+}
+
+.footer-line{
+    font-family: Helvetica;
+    padding:20px 30px;
+    background: #000;
+    color:@greyLight - #111;
+    line-height:1.5;
+    .border-box;
+}
+
+.footer-hr{
+    display:block;
+    width:100%;
+    height:1px;
+    background: url('../img/footer_hr.png') 0 0 no-repeat;
+    background-size:100%;
+}
+
+.footer-table{
+    display:table;
+    width:100%;
+    
+    & > div{
+        display: table-cell;
+        vertical-align: top;
+        padding:30px 0;
+    }
+}
+
+.studio-logo{
+    width: 38px;
+    height:30px;
+    background: url('../img/icons/f_icons.png') -90px 0 no-repeat;
+}
+
+.studio-text{
+    font-size: 14px;
+    padding-right:15px;
+}
+
+.f-contact, .f-phone, .f-time{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.f_icon_cont{
+    width:22px;
+    height:32px;
+    background: url('../img/icons/f_icons.png') 0 0 no-repeat;
+}
+
+.f_icon_phone{
+    width:28px;
+    height:24px;
+    background: url('../img/icons/f_icons.png') -26px 0 no-repeat;
+}
+
+.f_icon_time{
+    width:25px;
+    height:25px;
+    background: url('../img/icons/f_icons.png') -59px 0 no-repeat;
+}
+
+.padding-left-15{
+    padding-left:15px;
+}
+
+
+/*
+ * 4-12-2014
+ * stock-main
+ */
+
+
+.stock-main-list{
+    width:100%;
+    height:301px;
+}
+
+.stock-main-one{
+    width:198px;
+    height:281px;
+    .border-radius(10px);
+    overflow: hidden;
+    box-shadow: 1px 0 3px 0 @fon - #222;
+}
+
+.stock-main-list .bx-viewport{
+    padding:10px 0 !important;
+}
+.stock-img-wrap{
+    display:block;
+    width:198px;
+    height:281px;
+    img{
+        display:block;
+        width:100%;
+    }
+}
+
+.stock-main-list{
+    .bx-controls{
+        .bx-prev, .bx-next{
+            display:block !important;
+            width:30px !important;
+            height:40px !important;
+            margin-top:-20px !important;
+            background: url('../img/icons/stockArrow.png') no-repeat;
+        }
+
+        .bx-prev{
+            left:-50px !important;
+            background-position: 0 0;
+            &:hover{
+                background-position: 0 0;
+            }
+        }
+        .bx-next{
+            right:-50px !important;
+            background-position: -30px 0;
+            &:hover{
+                background-position: -30px 0;
+            }
+        }
+
+    }
+}
+
+
+.index-page{
+    padding:40px 0;
+}
+
+.menu-shop-block{
+    width:325px;
+}
+
+.main-slider-block{
+    width:825px;
+    position:relative;
+    
+    .bx-controls{
+        position:absolute;
+        
+        text-align: right;
+        right:30px;
+        bottom:20px;
+    }
+    
+    .bx-pager{
+        display:inline-block;
+        width:400px !important;
+        margin-left:-400px;
+        height:60px;
+        text-align: right !important;
+        color:transparent !important;
+        
+        
+        .bx-pager-link{
+            width:25px;
+            height:25px;
+            border:solid 2px @greyBorder;
+            color:transparent !important;
+            
+            -moz-border-radius: 25px !important;
+            -webkit-border-radius: 25px !important;
+            border-radius: 25px !important;
+            
+        }
+        
+    }
+    
+}
+
+.main-slider{
+    .border-radius(10px);
+    overflow: hidden;
+    
+    box-shadow: 3px 0 6px 0 @fon - #222;
+    
+}
+
+
+/*
+ * 4-12-2014
+ * shop-menu-one
+ */
+
+.menu-shop-widget{
+    padding-right:30px;
+}
+
+.shop-menu-one{
+    padding:10px 5px;
+    display:block;
+    border:solid 1px transparent;
+    
+    & > .table-style{
+        display: table;
+        width:100%;
+        
+        
+        & > *{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+    }
+    
+    a{
+        font-size: 16px;
+        color:#000;
+        text-decoration: none;
+        width:210px;
+        padding:0 10px;
+    }
+    
+    
+    &:hover{
+        
+        border-color:@orange;
+
+        .gradient-create(@orange - #080808, @orange, @orange - #080808);
+        
+        & a{
+            color:#fff;
+        }
+        
+        .shop-count{
+            background: #fff;
+            color:#000;
+        }
+        
+    }
+    
+    .shop-count-cell{
+        text-align: right;
+    }
+    
+}
+
+.shop-count{
+    font-size: 10px;
+    display: inline-block;
+    background: @orange;
+    color:#fff;
+    padding:2px 3px;
+    margin-left:5px;
+}
+    
+.shop-menu-icon{
+    display:inline-block;
+    width:20px !important;
+    height:20px;
+    background: url('../img/icons/shopMenu.png') no-repeat;
+}
+
+.ism-1{background-position: -6px -15px;}
+.ism-2{background-position: -6px -45px;}
+.ism-3{background-position: -6px -80px;}
+.ism-4{background-position: -6px -112px;}
+.ism-5{background-position: -6px -142px;}
+.ism-6{background-position: -6px -175px;}
+.ism-7{background-position: -6px -205px;}
+.ism-8{background-position: -6px -239px;}
+.ism-9{background-position: -6px -272px;}
+
+
+/*
+ * 4-12-2014
+ * news-block-width
+ */
+
+
+.main-block{
+    display:table;
+}
+
+.left-index-place, .right-index-place{
+    display:table-cell;
+    vertical-align: top;
+}
+
+.left-index-place{
+    width:480px;
+    padding-right:80px;
+    .border-box;
+}
+
+
+
+.news-widget-spam{
+    position:relative;
+    display:block;
+    width:240px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.b-date{
+    font-size: 22px;
+    font-weight:bold;
+}
+
+.news-one-date{
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.news-one-title{
+    display:block;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin:10px 0;
+}
+
+.news-text{
+    font-size: 14px;
+    line-height:1.4;
+}
+
+.news-one{
+    width:200px;
+}
+
+.news-widget-spam-text{
+    position: absolute;
+    display:block;
+    bottom: 0;
+    width:100%;
+    background: rgba(44, 44, 44, 0.5);
+    color:#fff;
+    font-size: 15px;
+    text-align: center;
+    padding:10px 0;
+}
+
+
+
+/*
+ * 17-12-2014
+ * about page
+ * roy
+ */
+
+.table-ab{
+    display:table;
+}
+
+
+.row-ab{
+    display:table-row;
+}
+
+.left-cell-ab, .right-cell-ab{
+    display:table-cell;
+    padding-bottom: 40px;
+}
+
+.left-cell-ab{
+    width:400px;
+    text-align:right;
+    
+    p{
+        font-size: 17px;
+    }
+    
+    strong{
+        font-size:21px;
+    }
+    
+}
+
+.right-cell-ab{
+    p{
+       font-size: 17px;
+       line-height:1.5; 
+    }
+}
+
+.lin-ab{
+    padding-right:60px;
+}
+
+.rib-ab{
+    padding-left:60px;
+    border-left:solid 1px #000;
+}
+
+
+
+
+/*
+    created on: 25-11-2014
+    author: roy
+    target: MIXIN
+*/
+
+//закругления
+.border-radius(@radius:5px){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+//Учитывать внутренние отступы и бордеры
+.border-box{
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+//Флекс элемент
+.flex-line(@row:row, @space:space-between){
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display:flex;
+    
+    -ms-flex-direction: @row;
+    -webkit-flex-direction: @row;
+    -mox-flex-direction: @row;
+    -o-flex-direction: @row;
+    flex-direction: @row;
+    
+    justify-content:@space;
+}
+
+
+//Линия по ширине.
+.line-justify{
+    text-align: justify;
+    /* Обнуляем для родителя*/
+    line-height: 0;
+    font-size: 1px; /* 1px для Opera */
+    /* Лекарство для IE6-7*/
+    text-justify: newspaper;
+    zoom:1;
+
+    /* Включаем в работу последнюю строку*/
+    text-align-last: justify;
+    
+    &:after{
+        width: 100%;
+        height: 0px;
+        visibility: hidden;
+        overflow: hidden;
+        content: '';
+        display: inline-block;
+
+    }
+    
+    & > *{
+        display: inline-block;
+        text-align: center;
+        line-height: 1;
+        /* Без него в Opera будет отступ под элементами */
+        vertical-align: top;
+    }
+}
+
+//градиент
+
+.gradient-create(@start, @middle, @end){
+    background: @start; /* Old browsers */
+    background: -moz-linear-gradient(top, @start 0%, @middle 47%, @end 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(47%,@middle), color-stop(100%,@end)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @start 0%,@middle 47%,@end 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @start 0%,@middle 47%,@end 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @start 0%,@middle 47%,@end 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @start 0%,@middle 47%,@end 100%); /* W3C */
+}
+
+
+
